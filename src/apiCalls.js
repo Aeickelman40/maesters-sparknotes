@@ -1,4 +1,6 @@
 // multiple url variables for the main houses and characters that I want to pull from?
+// limit for only pulling ten at a time? API limit is 10, okay with selecting 10 important characters
+// and houses from the 250+ that are available?
 
 
 export const getAllHouses = async () => {
