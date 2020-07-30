@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import { Route, NavLink } from 'react-router-dom';
+import { getAllHouses, getAllCharacters } from '../apiCalls'
 import OptionPage from '../OptionPage/OptionPage';
 
 // import logo from '../images/logo.svg';
@@ -15,10 +16,20 @@ class App extends Component {
     }
 
   componentDidMount = async () => {
-    
+    try {
+      const allHouses = await getAllHouses();
+      const allCharacters = await getAllCharacters();
+      this.setState({
+        houses: allHouses,
+        characters: allCharacters
+      })
+    } catch (error) {
+      await this.setState({error: error})
+    }
   }  
 
   render() {
+    console.log(this.state)
     return (
       <div className = "App">
          {/* <img src={logo} className="App-logo" alt="logo" />  */}
