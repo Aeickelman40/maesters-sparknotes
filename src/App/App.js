@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import { Route, NavLink } from 'react-router-dom';
-import optionPage from '../optionPage/optionPage';
+import OptionPage from '../optionPage/optionPage';
 
 // import logo from '../images/logo.svg';
 
@@ -20,7 +20,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div className = "App">
          {/* <img src={logo} className="App-logo" alt="logo" />  */}
         <h1>Sparknotes for Junior Maesters</h1>
           <p>Don't have time to read volumes of old books in Kings Landing?</p>
@@ -28,8 +28,8 @@ class App extends Component {
           <button>Click here to enter!</button>
         </NavLink>
       <Route
-        path="/optionPage"
-        render={() => <optionPage />} />
+        exact path = "/optionPage"
+        render={() => <OptionPage />} />
       </div>
     );
   }

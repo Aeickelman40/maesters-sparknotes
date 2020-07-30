@@ -1,7 +1,9 @@
 import React from 'react';
 
-const optionPage = () => {
-
+const OptionPage = () => {
+    return (
+        <h1>Test</h1>
+    )
 }
 
-export default optionPage;
+export default OptionPage;
