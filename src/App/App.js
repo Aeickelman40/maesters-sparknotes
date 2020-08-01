@@ -6,7 +6,8 @@ import WelcomePage from '../WelcomePage/WelcomePage';
 import OptionPage from '../OptionPage/OptionPage';
 import HousePage from '../HousePage/HousePage';
 import CharacterPage from '../CharacterPage/CharacterPage';
-
+import CharacterExpandedPage from '../CharacterExpandedPage/CharacterExpandedPage';
+import HouseExpandedPage from '../HouseExpandedPage/HouseExpandedPage';
 
 // import logo from '../images/logo.svg';
 
@@ -49,6 +50,12 @@ class App extends Component {
         <Route
           exact path = "/CharacterSelection"
           render={() => <CharacterPage />} />  
+        <Route
+          exact path = "/Characters/:id"
+          render={() => <CharacterExpandedPage />} /> 
+        <Route
+          exact path = "/Houses/:id"
+          render={() => <HouseExpandedPage />} />   
       </div>
     );
   }
