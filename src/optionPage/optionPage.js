@@ -1,8 +1,6 @@
 import React from 'react';
 import './OptionPage.css';
-import { Route, NavLink } from 'react-router-dom';
-import CharacterPage from '../CharacterPage/CharacterPage';
-import HousePage from '../HousePage/HousePage';
+import { NavLink } from 'react-router-dom';
 
 const OptionPage = () => {
     return (
@@ -14,12 +12,6 @@ const OptionPage = () => {
                 <NavLink to = {"/CharacterSelection"}>
                     <button>Choose by character</button>
                 </NavLink>
-                <Route
-                    exact path = "/HouseSelection"
-                    render={() => <HousePage />} />
-                <Route
-                    exact path = "/CharacterSelection"
-                    render={() => <CharacterPage />} />    
         </section>
     )
 }

@@ -1,8 +1,12 @@
 import React, { Component } from 'react';
 import './App.css';
-import { Route, NavLink } from 'react-router-dom';
-import { getAllHouses, getAllCharacters } from '../apiCalls'
+import { Route } from 'react-router-dom';
+import { getAllHouses, getAllCharacters } from '../apiCalls';
+import WelcomePage from '../WelcomePage/WelcomePage';
 import OptionPage from '../OptionPage/OptionPage';
+import HousePage from '../HousePage/HousePage';
+import CharacterPage from '../CharacterPage/CharacterPage';
+
 
 // import logo from '../images/logo.svg';
 
@@ -33,17 +37,18 @@ class App extends Component {
     return (
       <div className = "App">
          {/* <img src={logo} className="App-logo" alt="logo" />  */}
-        <h1>Sparknotes for Junior Maesters</h1>
-          <p>Don't have time to read volumes of old books in Kings Landing?</p>
-        <NavLink to = {"/OptionPage"}>
-          <button>Click here to enter!</button>
-        </NavLink>
-      {/* <Route 
-        exact path = "/"
-        render = { () => <App />}  /> */}
-      <Route
-        exact path = "/OptionPage"
-        render={() => <OptionPage />} />
+        <Route 
+          exact path = "/"
+          render={() => <WelcomePage />} />
+        <Route
+          exact path = "/OptionPage"
+          render={() => <OptionPage />} />
+        <Route
+          exact path = "/HouseSelection"
+          render={() => <HousePage />} />
+        <Route
+          exact path = "/CharacterSelection"
+          render={() => <CharacterPage />} />  
       </div>
     );
   }
