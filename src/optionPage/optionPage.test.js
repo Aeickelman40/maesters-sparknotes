@@ -19,9 +19,13 @@ describe( 'OptionPage', () => {
         expect(characterButton).toBeInTheDocument();
     })
 
-    it('Should change display when the house button is clicked', () => {
-
-    })
+    // it('Should change display when the house button is clicked', () => {
+    //     const { getByText, getByRole } = render(<MemoryRouter><OptionPage /></MemoryRouter>); 
+    //     const houseButton = getByText('Choose by house');
+    //     fireEvent.click(houseButton);
+    //     const mainText = getByText('House main');
+    //     expect(mainText).toBeInTheDocument();
+    // })
 
     it('Should change display when the character button is clicked', () => {
         
