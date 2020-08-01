@@ -29,7 +29,7 @@ class App extends Component {
   }  
 
   render() {
-    console.log(this.state)
+    // console.log(this.state)
     return (
       <div className = "App">
          {/* <img src={logo} className="App-logo" alt="logo" />  */}
