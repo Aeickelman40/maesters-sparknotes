@@ -8,7 +8,6 @@ const targaryen = "https://www.anapioficeandfire.com/api/houses/378";
 const tully = "https://www.anapioficeandfire.com/api/houses/395";
 
 // Narrowed down Characters
-
 const petyrBaelish = "https://www.anapioficeandfire.com/api/characters/823";
 const daenerysTargaryen = "https://www.anapioficeandfire.com/api/characters/271";
 const aryaStark = "https://anapioficeandfire.com/api/characters/";
@@ -27,6 +26,8 @@ export const getAllCharacters = async () => {
     const characters = await response.json();
     return characters
 }
+
+// resolve each individual fetch with a response.all?
 
 export const getArrynData = async () => {
     const response = await fetch(arryn);

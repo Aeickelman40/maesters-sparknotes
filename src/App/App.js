@@ -34,7 +34,7 @@ class App extends Component {
   }  
 
   render() {
-    // console.log(this.state)
+    console.log(this.state)
     return (
       <div className = "App">
          {/* <img src={logo} className="App-logo" alt="logo" />  */}
@@ -46,10 +46,10 @@ class App extends Component {
           render={() => <OptionPage />} />
         <Route
           exact path = "/HouseSelection"
-          render={() => <HousePage />} />
+          render={() => <HousePage houses={this.state.houses}/>} />
         <Route
           exact path = "/CharacterSelection"
-          render={() => <CharacterPage />} />  
+          render={() => <CharacterPage characters={this.state.characters}/>} />  
         <Route
           exact path = "/Characters/:id"
           render={() => <CharacterExpandedPage />} /> 
