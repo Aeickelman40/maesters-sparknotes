@@ -24,7 +24,7 @@ class App extends Component {
         characters: allCharacters
       })
     } catch (error) {
-      await this.setState({error: error})
+      this.setState({error: error})
     }
   }  
 
