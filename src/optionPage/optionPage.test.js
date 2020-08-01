@@ -19,7 +19,6 @@ describe( 'OptionPage', () => {
         expect(characterButton).toBeInTheDocument();
     })
 
-
     it('Should change display when the house button is clicked', () => {
 
     })
@@ -27,5 +26,5 @@ describe( 'OptionPage', () => {
     it('Should change display when the character button is clicked', () => {
         
     })
-    
+
 });    
