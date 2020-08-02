@@ -4,12 +4,16 @@ import { NavLink } from 'react-router-dom';
 
 const CharacterPage = ({ characters }) => {
     console.log(characters)
+    const charMap = characters.map((character) => {
+        return (
+            <p>{character.aliases[0]}</p>
+        )  
+    })
+    
     return (
         <section className = "selection-main">
-            <h1>Character map</h1>
-            {/* <p>{props}</p> */}
             <NavLink to = {"/Characters/:id"}>
-                <button>to expanded character</button>
+                <h1>{charMap}</h1>
             </NavLink>
         </section>
     )

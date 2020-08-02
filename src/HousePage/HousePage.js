@@ -4,11 +4,15 @@ import { NavLink } from 'react-router-dom';
 
 const HousePage = ({ houses }) => {
     console.log(houses)
+    const houseMap = houses.map((house) => {
+        return (
+            <p>{house.name}</p>
+        )  
+    })
     return (
         <section className = "selection-main">
-            <h1>House map</h1>
             <NavLink to = {"/Houses/:id"}>
-                <button>to house expanded</button>
+              <h1>{houseMap}</h1>
             </NavLink>
         </section>
     )
