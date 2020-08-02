@@ -16,7 +16,7 @@ const bronn = "https://www.anapioficeandfire.com/api/characters/217";
 const cerseiLannister = "https://www.anapioficeandfire.com/api/characters/238";
 
 export const getAllHouses = async () => {
-    const response = await fetch("https://anapioficeandfire.com/api/characters/");
+    const response = await fetch("https://anapioficeandfire.com/api/houses/");
     const houses = await response.json();
     return houses
 }
