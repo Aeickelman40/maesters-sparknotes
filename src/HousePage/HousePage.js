@@ -4,15 +4,16 @@ import { NavLink } from 'react-router-dom';
 
 const HousePage = ({ houses }) => {
     console.log(houses)
+    let houseId;
     const houseMap = houses.map((house) => {
-        const houseId = house.url.split('').pop();
+         houseId = house.url.split('').pop();
         return (
             <p>{house.name}, {houseId}</p>
         )  
     })
     return (
         <section className = "selection-main">
-            <NavLink to = {`/Houses/${houses.name}`}>
+            <NavLink to = {`/Houses/${houseId}`}>
               <h1>{houseMap}</h1>
             </NavLink>
         </section>

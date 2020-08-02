@@ -27,7 +27,11 @@ export const getAllCharacters = async () => {
     return characters
 }
 
-// resolve each individual fetch with a response.all?
+
+// put urls in array, map over array, return promise for every url, promise.all
+
+
+// getClassData (url) 
 
 export const getArrynData = async () => {
     const response = await fetch(arryn);
