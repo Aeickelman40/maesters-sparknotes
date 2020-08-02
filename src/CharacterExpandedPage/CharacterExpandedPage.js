@@ -5,7 +5,7 @@ import './CharacterExpandedPage.css';
 // import './mediaQuery.css';
 
 const CharacterExpandedPage = ({ character }) => {
-    // console.log(character)
+    console.log(character)
     return (
         <section className = "expanded-main">
             <h1>Character Expanded main</h1>

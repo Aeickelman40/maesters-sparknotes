@@ -52,13 +52,38 @@ class App extends Component {
           render={() => <CharacterPage characters={this.state.characters}/>} />  
         <Route
           exact path = "/Characters/:id"
-          render={() => <CharacterExpandedPage />} /> 
+          render={() => <CharacterExpandedPage character={this.state.characters}/>} /> 
         <Route
           exact path = "/Houses/:id"
           render={() => <HouseExpandedPage />} />   
+        {/* <Route
+          exact path = "/Characters/:id"
+          render={( match ) => {
+            const { id } = match.params;
+            const characterToRender = this.state.characters.find(character => character.id === parseInt(id));
+            return <CharacterExpandedPage
+                      characterId = {id}
+                      {... characterToRender}
+             />} 
+          }/>  */}
+
       </div>
     );
   }
 }
 
 export default App;
+
+          // <Route 
+          //   exact path="/shoe/:id" 
+          //   render={({match}) => {
+          //     const { id } = match.params;
+          //     const shoeToRender = this.state.shoes.find(shoe => shoe.id === parseInt(id));
+          //     return <ExpandedShoe
+          //               postNewComment={this.postNewComment}
+          //               comments={this.state.comments}
+          //               addComment={this.addComment}
+          //               shoeId ={id}
+
+          //      {...shoeToRender}/>
+          //   }}
