@@ -7,6 +7,8 @@ const stark = "https://www.anapioficeandfire.com/api/houses/362";
 const targaryen = "https://www.anapioficeandfire.com/api/houses/378";
 const tully = "https://www.anapioficeandfire.com/api/houses/395";
 
+const houseArray = [arryn, baratheon, greyjoy, lannister, stark, targaryen, tully]
+
 // Narrowed down Characters
 const petyrBaelish = "https://www.anapioficeandfire.com/api/characters/823";
 const daenerysTargaryen = "https://www.anapioficeandfire.com/api/characters/271";
@@ -14,6 +16,10 @@ const aryaStark = "https://anapioficeandfire.com/api/characters/";
 const sansaStark = "https://www.anapioficeandfire.com/api/characters/957";
 const bronn = "https://www.anapioficeandfire.com/api/characters/217";
 const cerseiLannister = "https://www.anapioficeandfire.com/api/characters/238";
+
+const characterArray = [petyrBaelish, daenerysTargaryen, aryaStark, sansaStark, bronn, cerseiLannister]
+
+// put urls in array, map over array, return promise for every url, promise.all
 
 export const getAllHouses = async () => {
     const response = await fetch("https://anapioficeandfire.com/api/houses/");
@@ -28,10 +34,9 @@ export const getAllCharacters = async () => {
 }
 
 
-// put urls in array, map over array, return promise for every url, promise.all
-
 
 // getClassData (url) 
+
 
 export const getArrynData = async () => {
     const response = await fetch(arryn);
