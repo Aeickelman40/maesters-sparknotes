@@ -1,0 +1,12 @@
+.option-area {
+    border: 4px solid teal;
+    border-radius: 4px;
+    background-color: white;
+    color: teal;
+    width: 220px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}

@@ -11,7 +11,7 @@ describe( 'CharacterPage', () => {
 
     it('Should render the CharacterPage component', () => {
     const { getByText } = render(<MemoryRouter><CharacterPage /></MemoryRouter>);
-    const mainText = getByText('Character main');
+    const mainText = getByText('Character map');
     expect(mainText).toBeInTheDocument();
     }) 
     

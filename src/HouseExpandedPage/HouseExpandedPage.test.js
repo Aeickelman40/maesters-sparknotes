@@ -11,8 +11,7 @@ describe( 'HouseExpandedPage', () => {
 
     it('Should render the HouseExpandedPage component', () => {
     const { getByText } = render(<MemoryRouter><HouseExpandedPage /></MemoryRouter>);
-    // const mainText = getByText('Character main');
-    // expect(mainText).toBeInTheDocument();
-    }) 
-    
+    const mainText = getByText('House Expanded main');
+    expect(mainText).toBeInTheDocument();
+    })     
 })

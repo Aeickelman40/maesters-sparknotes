@@ -1,15 +1,16 @@
 import React from 'react';
-// import Shoes from '../Shoes/Shoes';
-
 import './CharacterPage.css';
-// import './mediaQuery.css';
+import { NavLink } from 'react-router-dom';
 
 const CharacterPage = ({ characters }) => {
     console.log(characters)
     return (
-        <section>
-            <h1>Character main</h1>
+        <section className = "selection-main">
+            <h1>Character map</h1>
             {/* <p>{props}</p> */}
+            <NavLink to = {"/Characters/:id"}>
+                <button>to expanded character</button>
+            </NavLink>
         </section>
     )
 }

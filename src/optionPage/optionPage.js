@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 
 const OptionPage = () => {
     return (
-        <section>
+        <section className = "option-area">
             <h1>What do you plan on learning today?</h1>
                 <NavLink to = {"/HouseSelection"}>
                     <button>Choose by house</button>

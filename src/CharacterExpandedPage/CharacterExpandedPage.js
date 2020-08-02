@@ -4,10 +4,10 @@ import React from 'react';
 import './CharacterExpandedPage.css';
 // import './mediaQuery.css';
 
-const CharacterExpandedPage = ({ characters }) => {
-    console.log(characters)
+const CharacterExpandedPage = ({ character }) => {
+    // console.log(character)
     return (
-        <section>
+        <section className = "expanded-main">
             <h1>Character Expanded main</h1>
             {/* <p>{props}</p> */}
         </section>

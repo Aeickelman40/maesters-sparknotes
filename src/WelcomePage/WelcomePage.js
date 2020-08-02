@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 
 const WelcomePage = () => {
     return (
-        <section>
+        <section className = "welcome-area">
             <h1>Sparknotes for Junior Maesters</h1>
             <p>Don't have time to read volumes of old books in Kings Landing?</p>
             <NavLink to = {"/OptionPage"}>
