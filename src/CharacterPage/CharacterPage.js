@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './CharacterPage.css';
 // import { getAllCharacters } from '../apiCalls';
 import { NavLink } from 'react-router-dom';
@@ -9,7 +9,7 @@ const CharacterPage = ({ characters }) => {
     const charMap = characters.map((character) => {
         charId = character.url.split('').pop();
         return (
-            <p>{character.aliases[0]}, {charId}</p>
+            <p>{character.name}, {charId}</p>
         )     
     })
     return (

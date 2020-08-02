@@ -22,7 +22,7 @@ const characterArray = [petyrBaelish, daenerysTargaryen, aryaStark, sansaStark, 
 // put urls in array, map over array, return promise for every url, promise.all
 
 export const getAllCharacters = async () => {
-    const responseArray = characterArray.map(async (character) => {
+    const responseArray = characterArray.map( async (character) => {
         const response =  await fetch(character);
         const characterData = await response.json();
         return characterData;
@@ -30,13 +30,12 @@ export const getAllCharacters = async () => {
     return Promise.all(responseArray)
         .then(data => {
             let characterData = data
-            console.log(characterData)
             return characterData;
     })
 }
 
 export const getAllHouses = async () => {
-    const responseArray = houseArray.map(async (house) => {
+    const responseArray = houseArray.map( async (house) => {
         const response =  await fetch(house);
         const houseData = await response.json();
         return houseData;
@@ -44,26 +43,14 @@ export const getAllHouses = async () => {
     return Promise.all(responseArray)
         .then(data => {
             let houseData = data
-            console.log(houseData)
             return houseData;
     })
 }
 
-// export const getAllHouses = async () => {
-//     const response = await fetch("https://anapioficeandfire.com/api/houses/");
-//     const houses = await response.json();
-//     return houses
+
+// getClassData = async (url) => {
+
 // }
-
-// export const getAllCharacters = async () => {
-//     const response = await fetch("https://anapioficeandfire.com/api/characters/");
-//     const characters = await response.json();
-//     return characters
-// }
-
-
-
-// getClassData (url) 
 
 
 // export const getArrynData = async () => {

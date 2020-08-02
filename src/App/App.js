@@ -50,23 +50,22 @@ class App extends Component {
         <Route
           exact path = "/CharacterSelection"
           render={() => <CharacterPage characters={this.state.characters}/>} />  
-        <Route
-          exact path = "/Characters/:id"
-          render={() => <CharacterExpandedPage character={this.state.characters}/>} /> 
-        <Route
-          exact path = "/Houses/:id"
-          render={() => <HouseExpandedPage />} />   
         {/* <Route
-          exact path = "/Characters/:id"
-          render={( match ) => {
+          exact path = "/Characters/:name"
+          render={() => <CharacterExpandedPage character={this.state.characters}/>} />  */}
+        {/* <Route
+          exact path = "/Houses/:name"
+          render={( match ) => <HouseExpandedPage {... match} house={this.state.houses}/>} />    */}
+        <Route
+          exact path = "/HouseSelection/:id"
+          render={( {match} ) => {
             const { id } = match.params;
-            const characterToRender = this.state.characters.find(character => character.id === parseInt(id));
-            return <CharacterExpandedPage
-                      characterId = {id}
-                      {... characterToRender}
-             />} 
-          }/>  */}
-
+            const houseToRender = this.state.houses.find(house => house.id === parseInt(id));
+            return <HouseExpandedPage
+                houseId = {id} 
+                {... houseToRender} 
+          />}  
+        }/> 
       </div>
     );
   }
