@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import { Route } from 'react-router-dom';
-import { getAllHouses, getAllCharacters } from '../apiCalls';
+import { getAllHouses, getAllCharacters, postComment } from '../apiCalls';
 import WelcomePage from '../WelcomePage/WelcomePage';
 import OptionPage from '../OptionPage/OptionPage';
 import HousePage from '../HousePage/HousePage';
@@ -29,10 +29,23 @@ class App extends Component {
     } catch (error) {
       this.setState({error: error})
     }
-  }  
+  }
+
+  saveComment = (newComment) => {
+    this.setState({
+      comments: [...this.state.comments, newComment],
+    });
+    this.addNewComment(newComment);
+    };
+
+  addNewComment = async ({ author, main_text }) => {
+    postComment(author, main_text)
+    .then((response) => response.json())
+    .catch((error) => console.log(error))
+  } 
 
   render() {
-    // console.log(this.state)
+    console.log(this.state)
     return (
       <div className = "App">
         <Route 
@@ -54,6 +67,8 @@ class App extends Component {
             const houseToRender = this.state.houses.find(house => house.houseId === parseInt(id))
             return <HouseExpandedPage
                 houseId = {id} 
+                comments={this.state.comments}
+                saveComment={this.saveComment}
                 {... houseToRender} 
           />}  
         }/> 

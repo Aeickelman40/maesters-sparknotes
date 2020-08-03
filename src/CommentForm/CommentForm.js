@@ -1,53 +1,37 @@
 
 import React, { Component } from 'react';
-// import { getComments } from '../ApiCalls'
 import './CommentForm.css'
 
 class CommentForm extends Component {
   constructor (props) {
     super(props);
     this.state = {
-      isLoaded: false,
       main_text: "",
       author: "",
     }
   };
 
-  componentDidMount = async () => {
-    // const response = await getComments(this.props.shoeId)
-    // this.props.addComment(...response)
-    // return response;
-  }
+  // componentDidMount = async () => {
+  //   // const response = await getComments(this.props.shoeId)
+  //   // this.props.addComment(...response)
+  //   // return response;
+  // }
 
   handleChange = (event) => {
     this.setState( { [event.target.name]: event.target.value} );
   }
 
   handleSubmit = async (event) => {
+    console.log(this.props)
     event.preventDefault();
     const newComment = {
-      shoeId: this.props.id,
       author: this.state.author,
       main_text: this.state.main_text,
     }
-    this.props.comments.push(newComment)
-
-    const response = await this.props.postNewComment(newComment.shoeId,newComment.author, newComment.main_text)
-    this.props.addComment(...this.props.comments)
+    this.props.saveComment(newComment)
   }
 
   render() {
-    // const comments = this.props.comments.map((comment) => {
-    //     return (
-    //         <p>test</p>
-    //       <Comment
-    //         author={comment.author}
-    //         comment={comment.main_text}
-    //         date={comment.created_at}
-    //       />
-    //     )
-    //   })
-
     return (
       <section className="comment-section">
           <form className="comment-form">
@@ -73,7 +57,12 @@ class CommentForm extends Component {
             >Submit Comment</button>
           </form>
           <h1>Previous Additions to the Library</h1>
-        <section className="comments-display">Comments Display</section>
+        <section className="comments-display">Posted comments will live here in version 1.2, but we do have live updating for the time being!:
+          Author Name:
+            {this.state.author} 
+          Comment:  
+            {this.state.main_text}
+        </section>
       </section>
         
     )

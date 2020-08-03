@@ -6,7 +6,6 @@ const HousePage = ({ houses }) => {
     // console.log(houses)
     const houseMap = houses.map((house) => {
         let houseId = house.url.split('').pop();
-        console.log(houseId)
         return (
             <section>
                 <NavLink to = {`/HouseSelection/${houseId}`}

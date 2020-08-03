@@ -42,6 +42,20 @@ export const getAllHouses = async () => {
     })
 }
 
+export const postComment = (author, main_text) => {
+    return fetch('http://localhost:3001/HouseSelection/', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            author,
+            main_text
+        })
+    })
+}
+
+// Stretch goal to make this more dynamic getHouseData = async (house) => 
 
 export const getBaratheonData = async () => {
     const response = await fetch(baratheon);
