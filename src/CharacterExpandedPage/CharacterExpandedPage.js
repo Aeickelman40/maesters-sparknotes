@@ -1,8 +1,6 @@
 import React from 'react';
-
-// import Shoes from '../Shoes/Shoes';
 import './CharacterExpandedPage.css';
-// import './mediaQuery.css';
+import CommentForm from '../CommentForm/CommentForm';
 
 const CharacterExpandedPage = ({ ...character }) => {
     console.log(character)
@@ -10,6 +8,7 @@ const CharacterExpandedPage = ({ ...character }) => {
         <section className = "expanded-main">
             <h1>Character Expanded main</h1>
             <p>{character.characterId}</p>
+            <CommentForm />
         </section>
     )
 }

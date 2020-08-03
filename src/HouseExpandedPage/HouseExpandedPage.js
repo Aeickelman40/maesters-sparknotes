@@ -1,9 +1,6 @@
 import React from 'react';
-
-// import Shoes from '../Shoes/Shoes';
 import './HouseExpandedPage.css';
 import CommentForm from '../CommentForm/CommentForm';
-// import './mediaQuery.css';
 
 const HouseExpandedPage = ({ ...house }) => {
     console.log(house)
