@@ -1,13 +1,13 @@
 import React from 'react';
 import './CharacterPage.css';
-// import { getAllCharacters } from '../apiCalls';
 import { NavLink } from 'react-router-dom';
+
 
 const CharacterPage = ({ characters }) => {
     console.log(characters)
-    let characterId;
     const charMap = characters.map((character) => {
-        characterId = character.url.split('').pop();
+        let characterId = character.url.split('').pop();
+        console.log(characterId)
         return (
             <NavLink to = {`/CharacterSelection/${characterId}`}
                     id = {characterId}> 
@@ -29,37 +29,57 @@ const CharacterPage = ({ characters }) => {
 //     constructor(characters) {
 //         super(characters);
 //         this.state = {
-            
+//             id: 0
 //         }
 //     }
 
-//     componentDidMount = () => {
-//         this.setState({
-//             id: this.charId
+//     componentDidMount = async () => {
+//         try {
+//             const allCharacters = await getAllCharacters();
+//             this.addIdToCharacterMap();
+//             this.setState({
+//                 characters: allCharacters,
+//                 //  id: this.characterId
+//             }) 
+//         } catch (error) {
+//             this.setState({error: error})
+//             }
+//     }
+
+//     addIdToCharacterMap = () => {
+//         let characterId;
+//         const charMap =  this.props.characters.map((character) => {
+//             characterId = character.url.split('').pop();
+//             this.setState({
+//                 id: characterId
+//             })
+//          return charMap
 //         })
 //     }
     
 //     render() {
-//         console.log(this.state)
-//         let charId;
-//         const charMap = this.state.map((character) => {
-//             charId = character.url.split('').pop();
+//         console.log(this.props)
+//         let characterId;
+//         const charMap = this.props.characters.map((character) => {
+//             characterId = character.url.split('').pop();
 //             // this.setState({
-//             //     id: charId
+//             //     id: characterId
 //             // })
 //             return (
-//                 <p>{character.aliases[0]}</p>
+//                 <section>
+//                 <NavLink to = {`/Characters/${characterId}`}> 
+//                     <p>{character.name}, {characterId}</p>
+//                 </NavLink>
+//                 </section>
 //             )  
 //         })
 //         return (
 //             <section className = "selection-main">
-//             <NavLink to = {`/Characters/${charId}`}> 
 //                 <h1>{charMap}</h1>
-//                 <p>test</p>
-//             </NavLink>
 //         </section>
 //     )
-// }}
+// }
+// }
 
 export default CharacterPage;
 

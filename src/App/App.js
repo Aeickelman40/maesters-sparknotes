@@ -50,21 +50,14 @@ class App extends Component {
         <Route
           exact path = "/CharacterSelection"
           render={() => <CharacterPage characters={this.state.characters}/>} />  
-        {/* <Route
-          exact path = "/Characters/:name"
-          render={() => <CharacterExpandedPage character={this.state.characters}/>} />  */}
-        {/* <Route
-          exact path = "/Houses/:name"
-          render={( match ) => <HouseExpandedPage {... match} house={this.state.houses}/>} />    */}
         <Route
           exact path = "/HouseSelection/:id"
           render={( {match} ) => {
             const { id } = match.params;
-            const houseToRender = this.state.houses.find(house => house.id === parseInt(id))
-             && this.state.houses.find(house => house.houseId === parseInt(id));
+            const houseToRender = this.state.houses.find(house => house.houseId === parseInt(id))
 
             return <HouseExpandedPage
-                house ={this.state.houses}
+                // house ={this.state.houses}
                 houseId = {id} 
                 {... houseToRender} 
           />}  
@@ -73,10 +66,10 @@ class App extends Component {
           exact path = "/CharacterSelection/:id"
           render={( {match} ) => {
             const { id } = match.params;
-            const characterToRender = this.state.characters.find(character => character.id === parseInt(id))
-             && this.state.characters.find(character => character.characterId === parseInt(id));             
+            console.log(id)
+            const characterToRender = this.state.characters.find(character => character.characterId === parseInt(id));            
             return <CharacterExpandedPage
-                character ={this.state.characters}
+                // character ={this.state.characters}
                 characterId = {id} 
                 {... characterToRender} 
           />}  

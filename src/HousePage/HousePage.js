@@ -11,7 +11,7 @@ const HousePage = ({ houses }) => {
             <section>
                 <NavLink to = {`/HouseSelection/${houseId}`}
                     id = {houseId}>
-                    <p>{house.name}</p>
+                    <p>{house.name}, {houseId}</p>
                 </NavLink>
             </section>
         )  

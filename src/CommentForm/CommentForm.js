@@ -53,7 +53,7 @@ class CommentForm extends Component {
           <form className="comment-form">
             <input
                 className="name-input input"
-                placeholder="Name"
+                placeholder="Author"
                 name="author"
                 value={this.state.name}
                 onChange={this.handleChange}
@@ -72,7 +72,7 @@ class CommentForm extends Component {
               onClick={ this.handleSubmit }
             >Submit Comment</button>
           </form>
-          <h1>Comments</h1>
+          <h1>Previous Additions to the Library</h1>
         <section className="comments-display">Comments Display</section>
       </section>
         

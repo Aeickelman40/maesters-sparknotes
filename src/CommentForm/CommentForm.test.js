@@ -10,27 +10,15 @@ jest.mock('../apiCalls')
 describe( 'CommentForm', () => {
 
     it('Should render the CommentForm component', () => {
-        const { getByText, getByRole } = render(<MemoryRouter><CommentForm /></MemoryRouter>);
-        const 
+        const { getByPlaceholderText, getByRole } = render(<MemoryRouter><CommentForm /></MemoryRouter>);
+        const authorInput = getByPlaceholderText('Author');
+        const commentInput = getByPlaceholderText('Comment');
+        const submitButton = getByRole('button');
+        expect(authorInput).toBeInTheDocument();
+        expect(commentInput).toBeInTheDocument();
+        expect(submitButton).toBeInTheDocument();
     })
-
-
 })
-
-
-    // it('Should render the ExpandedShoe component', () => {
-    //     const { getByPlaceholderText, getByRole } = render(<MemoryRouter><SubmitShoeForm /></MemoryRouter>)
-    //     const brandInput = getByPlaceholderText('BRAND');
-    //     const colorInput = getByPlaceholderText('COLOR');
-    //     const priceInput = getByPlaceholderText('Price (in dollars)');
-    //     const modelInput = getByPlaceholderText('MODEL');
-    //     const submitButton = getByRole('button');
-    //     expect(brandInput).toBeInTheDocument();
-    //     expect(modelInput).toBeInTheDocument();
-    //     expect(colorInput).toBeInTheDocument();
-    //     expect(submitButton).toBeInTheDocument();
-    //     expect(priceInput).toBeInTheDocument();
-    // });
 
     // it('Should know an input\'s value', () => {
     //     const { getByPlaceholderText } = render(<MemoryRouter><SubmitShoeForm /></MemoryRouter>)

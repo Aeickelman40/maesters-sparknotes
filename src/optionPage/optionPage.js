@@ -13,7 +13,10 @@ const OptionPage = () => {
                     </button>
                 </NavLink>
                 <NavLink to = {"/CharacterSelection"}>
-                    <button>Choose by character</button>
+                    <button
+                        data-testid="character-button">
+                            Choose by character
+                    </button>
                 </NavLink>
         </section>
     )
