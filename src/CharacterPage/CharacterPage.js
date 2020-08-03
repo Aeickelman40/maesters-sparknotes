@@ -11,13 +11,15 @@ const CharacterPage = ({ characters }) => {
         return (
             <NavLink to = {`/CharacterSelection/${characterId}`}
                     id = {characterId}> 
-                <p>{character.name}</p>
+                <p>Character Name: {character.name}</p>
             </NavLink>
         )     
     })
     return (
         <section className = "selection-main">
-            <h1>{charMap}</h1>
+            <h1
+            data-testid="character-selection-render"
+            >{charMap}</h1>
         </section>
     )
 }

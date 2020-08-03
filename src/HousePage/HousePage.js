@@ -10,14 +10,16 @@ const HousePage = ({ houses }) => {
             <section>
                 <NavLink to = {`/HouseSelection/${houseId}`}
                     id = {houseId}>
-                    <p>{house.name}</p>
+                    <p>House Name: {house.name}</p>
                 </NavLink>
             </section>
         )  
     })
     return (
         <section className = "selection-main">       
-              <h1>{houseMap}</h1>
+              <h1
+              data-testid="house-selection-render"
+              >{houseMap}</h1>
         </section>
     )
 }
