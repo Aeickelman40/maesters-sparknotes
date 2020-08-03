@@ -10,9 +10,11 @@ jest.mock('../apiCalls')
 describe( 'HousePage', () => {
 
     it('Should render the HousePage component', () => {
-    //    const { getByText } = render(<MemoryRouter><HousePage /></MemoryRouter>);
-    //    const mainText = getByText('House map');
-    //    expect(mainText).toBeInTheDocument();
+
+        
+        const { getByText } = render(<MemoryRouter><HousePage /></MemoryRouter>)
+        const nameText = getByText('C')
+        expect(nameText).toBeInTheDocument();
     })
 
 })

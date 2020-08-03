@@ -22,7 +22,6 @@ class CommentForm extends Component {
   }
 
   handleSubmit = async (event) => {
-    console.log(this.props)
     event.preventDefault();
     const newComment = {
       author: this.state.author,

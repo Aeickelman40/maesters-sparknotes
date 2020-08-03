@@ -18,37 +18,30 @@ describe( 'CommentForm', () => {
         expect(commentInput).toBeInTheDocument();
         expect(submitButton).toBeInTheDocument();
     })
+
+    it('Should know an input\'s value', () => {
+        const { getByPlaceholderText } = render(<MemoryRouter><CommentForm /></MemoryRouter>)
+        const authorInput = getByPlaceholderText('Author');
+        const commentInput = getByPlaceholderText('Comment');
+        fireEvent.change(authorInput, { target: { value: "Alex" }})
+        fireEvent.change(commentInput, { target: { value: "Really hope this comment works!" }})
+        expect(authorInput).toBeInTheDocument()
+        expect(commentInput).toBeInTheDocument()
+    });
+
+    it('Should be able to submit a comment', () => {
+        const mockSaveComment = jest.fn();
+        const { getByPlaceholderText, getByRole } = render(<MemoryRouter>
+            <CommentForm 
+                saveComment= {mockSaveComment}
+            />
+        </MemoryRouter>)
+        const authorInput = getByPlaceholderText('Author');
+        const commentInput = getByPlaceholderText('Comment');
+        const submitButton = getByRole('button');
+        fireEvent.change(authorInput, { target: { value: "Alex" }})
+        fireEvent.change(commentInput, { target: { value: "Really hope this comment works!" }})
+        fireEvent.click(submitButton);
+        expect(mockSaveComment).toHaveBeenCalledTimes(1)
+    })
 })
-
-    // it('Should know an input\'s value', () => {
-    //     const { getByPlaceholderText } = render(<MemoryRouter><SubmitShoeForm /></MemoryRouter>)
-    //     const brandInput = getByPlaceholderText('BRAND');
-    //     const colorInput = getByPlaceholderText('COLOR');
-    //     const priceInput = getByPlaceholderText('Price (in dollars)');
-    //     const modelInput = getByPlaceholderText('MODEL');
-
-    //     fireEvent.change(brandInput, { target: { value: "NIKE" }})
-    //     fireEvent.change(colorInput, { target: { value: "red" }})
-    //     fireEvent.change(priceInput, { target: { value: 200 }})
-    //     fireEvent.change(modelInput, { target: { value: "13" }})
-
-
-    //     expect(brandInput).toBeInTheDocument()
-    //     expect(colorInput).toBeInTheDocument()
-    //     expect(priceInput).toBeInTheDocument()
-    //     expect(modelInput).toBeInTheDocument()
-    // });
-
-    // it('Should be able to submit a shoe', () => {
-    //     const { getByText } = render(<MemoryRouter><SubmitShoeForm /></MemoryRouter>)
-    
-    //     const submitSneaker = getByText('Submit Sneaker')
-    //     fireEvent.click(submitSneaker)
-
-    //     const successSubmitting = getByText("Submission has been added")
-    //     const submitAnotherShoe = getByText("Submit another shoe")
-
-    //     expect(successSubmitting).toBeInTheDocument();
-    //     expect(submitAnotherShoe).toBeInTheDocument();
-
-    // });
