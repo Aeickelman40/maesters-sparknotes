@@ -14,10 +14,7 @@ const daenerysTargaryen = "https://www.anapioficeandfire.com/api/characters/271"
 const aryaStark = "https://anapioficeandfire.com/api/characters/148";
 const sansaStark = "https://www.anapioficeandfire.com/api/characters/957";
 
-
 const characterArray = [petyrBaelish, daenerysTargaryen, aryaStark, sansaStark]
-
-// put urls in array, map over array, return promise for every url, promise.all
 
 export const getAllCharacters = async () => {
     const responseArray = characterArray.map( async (character) => {
@@ -44,12 +41,6 @@ export const getAllHouses = async () => {
             return houseData;
     })
 }
-
-
-// getClassData = async (url) => {
-
-// }
-
 
 
 export const getBaratheonData = async () => {
@@ -84,38 +75,27 @@ export const getTullyData = async () => {
     return tullyHouse;
 }
 
-// export const getPetyrData = async () => {
-//     const response = await fetch(petyrBaelish);
-//     const petyrBaelishCharacter = await response.json();
-//     return petyrBaelishCharacter;
-// }
+export const getPetyrData = async () => {
+    const response = await fetch(petyrBaelish);
+    const petyrBaelishCharacter = await response.json();
+    return petyrBaelishCharacter;
+}
 
-// export const getDaenerysData = async () => {
-//     const response = await fetch(daenerysTargaryen);
-//     const daenerysTargaryenCharacter = await response.json();
-//     return daenerysTargaryenCharacter;
-// }
+export const getDaenerysData = async () => {
+    const response = await fetch(daenerysTargaryen);
+    const daenerysTargaryenCharacter = await response.json();
+    return daenerysTargaryenCharacter;
+}
 
-// export const getAryaData = async () => {
-//     const response = await fetch(aryaStark);
-//     const aryaStarkCharacter = await response.json();
-//     return aryaStarkCharacter;
-// }
+export const getAryaData = async () => {
+    const response = await fetch(aryaStark);
+    const aryaStarkCharacter = await response.json();
+    return aryaStarkCharacter;
+}
 
-// export const getSansaData = async () => {
-//     const response = await fetch(sansaStark);
-//     const sansaStarkCharacter = await response.json();
-//     return sansaStarkCharacter;
-// }
+export const getSansaData = async () => {
+    const response = await fetch(sansaStark);
+    const sansaStarkCharacter = await response.json();
+    return sansaStarkCharacter;
+}
 
-// export const getBronnData = async () => {
-//     const response = await fetch(bronn);
-//     const bronnCharacter = await response.json();
-//     return bronnCharacter;
-// }
-
-// export const getCerseiData = async () => {
-//     const response = await fetch(cerseiLannister);
-//     const cerseiLannisterCharacter = await response.json();
-//     return cerseiLannisterCharacter;
-// }

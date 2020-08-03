@@ -3,7 +3,7 @@ import './HousePage.css';
 import { NavLink } from 'react-router-dom';
 
 const HousePage = ({ houses }) => {
-    console.log(houses)
+    // console.log(houses)
     const houseMap = houses.map((house) => {
         let houseId = house.url.split('').pop();
         console.log(houseId)
@@ -11,7 +11,7 @@ const HousePage = ({ houses }) => {
             <section>
                 <NavLink to = {`/HouseSelection/${houseId}`}
                     id = {houseId}>
-                    <p>{house.name}, {houseId}</p>
+                    <p>{house.name}</p>
                 </NavLink>
             </section>
         )  

@@ -9,8 +9,6 @@ import CharacterPage from '../CharacterPage/CharacterPage';
 import CharacterExpandedPage from '../CharacterExpandedPage/CharacterExpandedPage';
 import HouseExpandedPage from '../HouseExpandedPage/HouseExpandedPage';
 
-// import logo from '../images/logo.svg';
-
 class App extends Component {
   constructor() {
     super();
@@ -34,10 +32,9 @@ class App extends Component {
   }  
 
   render() {
-    console.log(this.state)
+    // console.log(this.state)
     return (
       <div className = "App">
-         {/* <img src={logo} className="App-logo" alt="logo" />  */}
         <Route 
           exact path = "/"
           render={() => <WelcomePage />} />
@@ -55,9 +52,7 @@ class App extends Component {
           render={( {match} ) => {
             const { id } = match.params;
             const houseToRender = this.state.houses.find(house => house.houseId === parseInt(id))
-
             return <HouseExpandedPage
-                // house ={this.state.houses}
                 houseId = {id} 
                 {... houseToRender} 
           />}  
@@ -69,7 +64,6 @@ class App extends Component {
             console.log(id)
             const characterToRender = this.state.characters.find(character => character.characterId === parseInt(id));            
             return <CharacterExpandedPage
-                // character ={this.state.characters}
                 characterId = {id} 
                 {... characterToRender} 
           />}  
@@ -80,17 +74,3 @@ class App extends Component {
 }
 
 export default App;
-
-          // <Route 
-          //   exact path="/shoe/:id" 
-          //   render={({match}) => {
-          //     const { id } = match.params;
-          //     const shoeToRender = this.state.shoes.find(shoe => shoe.id === parseInt(id));
-          //     return <ExpandedShoe
-          //               postNewComment={this.postNewComment}
-          //               comments={this.state.comments}
-          //               addComment={this.addComment}
-          //               shoeId ={id}
-
-          //      {...shoeToRender}/>
-          //   }}

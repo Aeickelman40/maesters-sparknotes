@@ -4,15 +4,14 @@ import { NavLink } from 'react-router-dom';
 
 
 const CharacterPage = ({ characters }) => {
-    console.log(characters)
+    // console.log(characters)
     const charMap = characters.map((character) => {
         let characterId = character.url.split('').pop();
         console.log(characterId)
         return (
             <NavLink to = {`/CharacterSelection/${characterId}`}
                     id = {characterId}> 
-                {/* <h1>{charMap}</h1> */}
-                <p>{character.name}, {characterId}</p>
+                <p>{character.name}</p>
             </NavLink>
         )     
     })
@@ -23,8 +22,7 @@ const CharacterPage = ({ characters }) => {
     )
 }
 
-
-
+// Attempt at updated the state
 // class CharacterPage extends Component {
 //     constructor(characters) {
 //         super(characters);

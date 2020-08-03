@@ -46,7 +46,7 @@ class HouseExpandedPage extends Component {
     }
 
     render() {
-        console.log(this.state)
+        // console.log(this.state)
         return (
             <section className= "expanded-main">
                 <h1>House Name: {this.state.houseData.name}</h1>
