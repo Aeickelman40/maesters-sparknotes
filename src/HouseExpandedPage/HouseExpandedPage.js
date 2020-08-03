@@ -9,6 +9,7 @@ const HouseExpandedPage = ({ ...house }) => {
     return (
         <section className = "expanded-main">
             <h1>House Expanded main</h1>
+            <p>{house.houseId}</p>
             <p></p>
         </section>
     )

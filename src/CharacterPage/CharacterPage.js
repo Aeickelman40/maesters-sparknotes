@@ -5,19 +5,20 @@ import { NavLink } from 'react-router-dom';
 
 const CharacterPage = ({ characters }) => {
     console.log(characters)
-    let charId;
+    let characterId;
     const charMap = characters.map((character) => {
-        charId = character.url.split('').pop();
+        characterId = character.url.split('').pop();
         return (
-            <p>{character.name}, {charId}</p>
+            <NavLink to = {`/CharacterSelection/${characterId}`}
+                    id = {characterId}> 
+                {/* <h1>{charMap}</h1> */}
+                <p>{character.name}, {characterId}</p>
+            </NavLink>
         )     
     })
     return (
         <section className = "selection-main">
-            <NavLink to = {`/CharacterSelection/${charId}`}
-                    id = {charId}> 
-                <h1>{charMap}</h1>
-            </NavLink>
+            <h1>{charMap}</h1>
         </section>
     )
 }

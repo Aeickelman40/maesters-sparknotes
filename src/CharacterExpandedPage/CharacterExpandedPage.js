@@ -9,7 +9,7 @@ const CharacterExpandedPage = ({ ...character }) => {
     return (
         <section className = "expanded-main">
             <h1>Character Expanded main</h1>
-            {/* <p>{props}</p> */}
+            <p>{character.characterId}</p>
         </section>
     )
 }

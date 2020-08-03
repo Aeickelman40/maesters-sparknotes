@@ -20,15 +20,14 @@ describe( 'OptionPage', () => {
     })
 
     // it('Should change display when the house button is clicked', () => {
-    //     const { getByText, getByRole } = render(<MemoryRouter><OptionPage /></MemoryRouter>); 
-    //     const houseButton = getByText('Choose by house');
-    //     fireEvent.click(houseButton);
-    //     const mainText = getByText('House main');
-    //     expect(mainText).toBeInTheDocument();
+    //     const { getByTestId, getByText } = render(<MemoryRouter><OptionPage /></MemoryRouter>); 
+    //     const houseButton = getByTestId('house-button');
+    //     fireEvent.click(houseButton); 
+    //     expect().toBeCalledTimes(1)
     // })
 
-    it('Should change display when the character button is clicked', () => {
+    // it('Should change display when the character button is clicked', () => {
         
-    })
+    // })
 
 });    
