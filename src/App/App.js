@@ -60,10 +60,25 @@ class App extends Component {
           exact path = "/HouseSelection/:id"
           render={( {match} ) => {
             const { id } = match.params;
-            const houseToRender = this.state.houses.find(house => house.id === parseInt(id));
+            const houseToRender = this.state.houses.find(house => house.id === parseInt(id))
+             && this.state.houses.find(house => house.houseId === parseInt(id));
+
             return <HouseExpandedPage
+                house ={this.state.houses}
                 houseId = {id} 
                 {... houseToRender} 
+          />}  
+        }/> 
+        <Route
+          exact path = "/CharacterSelection/:id"
+          render={( {match} ) => {
+            const { id } = match.params;
+            const characterToRender = this.state.characters.find(character => character.id === parseInt(id))
+             && this.state.characters.find(character => character.characterId === parseInt(id));             
+            return <CharacterExpandedPage
+                character ={this.state.characters}
+                characterId = {id} 
+                {... characterToRender} 
           />}  
         }/> 
       </div>

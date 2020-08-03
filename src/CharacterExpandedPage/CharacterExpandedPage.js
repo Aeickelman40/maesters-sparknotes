@@ -4,7 +4,7 @@ import React from 'react';
 import './CharacterExpandedPage.css';
 // import './mediaQuery.css';
 
-const CharacterExpandedPage = ({ character }) => {
+const CharacterExpandedPage = ({ ...character }) => {
     console.log(character)
     return (
         <section className = "expanded-main">

@@ -14,7 +14,8 @@ const CharacterPage = ({ characters }) => {
     })
     return (
         <section className = "selection-main">
-            <NavLink to = {`/Characters/${charId}`}> 
+            <NavLink to = {`/CharacterSelection/${charId}`}
+                    id = {charId}> 
                 <h1>{charMap}</h1>
             </NavLink>
         </section>
