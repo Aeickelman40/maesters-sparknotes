@@ -30,5 +30,4 @@ describe( 'App', () => {
     expect(houseButton).toBeInTheDocument();
     expect(characterButton).toBeInTheDocument();
   })
-
 })
