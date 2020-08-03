@@ -19,15 +19,30 @@ describe( 'OptionPage', () => {
         expect(characterButton).toBeInTheDocument();
     })
 
-    // it('Should change display when the house button is clicked', () => {
-    //     const { getByTestId, getByText } = render(<MemoryRouter><OptionPage /></MemoryRouter>); 
-    //     const houseButton = getByTestId('house-button');
-    //     fireEvent.click(houseButton); 
-    //     expect().toBeCalledTimes(1)
-    // })
+    it('Should update the display when the house select button is clicked', () => {
+        const mockHouseFetch = jest.fn();
+        const { getByText } = render(<MemoryRouter>
+            <OptionPage
+                getAllHouses = {mockHouseFetch}
+            />
+        </MemoryRouter>); 
+        const houseButton = getByText('Choose by house');
+        expect(mockHouseFetch).toHaveBeenCalledTimes(0);
+        fireEvent.click(houseButton); 
+        // expect(mockHouseFetch).toHaveBeenCalledTimes(1);
+    });
 
-    // it('Should change display when the character button is clicked', () => {
-        
-    // })
+    it('Should update the display when the character select button is clicked', () => {
+        const mockCharacterFetch = jest.fn();
+        const { getByText } = render(<MemoryRouter>
+            <OptionPage
+                getAllCharacters = {mockCharacterFetch}
+            />
+        </MemoryRouter>); 
+        const houseButton = getByText('Choose by house');
+        expect(mockCharacterFetch).toHaveBeenCalledTimes(0)
+        fireEvent.click(houseButton);
+        // expect(mockCharacterFetch).toHaveBeenCalledTimes(1)     
+    })
 
 });    
