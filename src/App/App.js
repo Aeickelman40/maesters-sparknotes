@@ -80,6 +80,8 @@ class App extends Component {
             const characterToRender = this.state.characters.find(character => character.characterId === parseInt(id));            
             return <CharacterExpandedPage
                 characterId = {id} 
+                comments={this.state.comments}
+                saveComment={this.saveComment}
                 {... characterToRender} 
           />}  
         }/> 
