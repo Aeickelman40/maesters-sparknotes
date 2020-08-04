@@ -66,6 +66,6 @@ This project was bootstrapped with Create React App.
 
 Post user comments
 
-Expand testing library
+Expand testing suite
 
 Deploy page so user does not have to compile
