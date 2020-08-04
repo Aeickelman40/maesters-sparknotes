@@ -22,7 +22,7 @@ Go into the newly cloned repository:
 cd maesters-sparknotes
 ```
 
-Once you are in the recently cloned repository, you have to install certain React dependencies in order for everything to compile correctly. This is done by running the following command on both tabs:
+Once you are in the recently cloned repository, you have to install certain React dependencies in order for everything to compile correctly.
 
 ```
 npm install
