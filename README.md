@@ -1,68 +1,62 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Sparknotes for Junior Maesters
 
-## Available Scripts
+The Sparknotes for Junior Maesters project is a solo project for Front End Module 3 students at the Turing School of Software and Design. The target audience for this application is a prospective maester (much like a junior developer) within the Game of Thrones universe. There can be a lot to learn for a young maester, and sometimes it just helps to have a narrowed down guide to help you out. Which is where Sparknotes for Junior Maesters comes in handy! The main goals for this project were to develop an application using the React framework, add unique DOM elements based on React Routing, integrate testing unique to React using Jest, and reinforce my understanding of asynchronous Javascript.
 
-In the project directory, you can run:
+## Contributors
 
-### `npm start`
+[Alex Eickelman](https://github.com/Aeickelman40)
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Installing / Getting started
 
-### `npm test`
+First, clone this repository using the following command in your terminal:
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+git clone https://github.com/Aeickelman40/maesters-sparknotes.git
 
-### `npm run build`
+```
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Go into the newly cloned repository:
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+```
+cd maesters-sparknotes
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Once you are in the recently cloned repository, you have to install certain React dependencies in order for everything to compile correctly. This is done by running the following command on both tabs:
 
-### `npm run eject`
+```
+npm install
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+This should then download all required user dependencies in order for you, the a junior maester, to interact with the application! 
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+In order for you to actually view and interact with the application add the following command within your terminal:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```
+npm start
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+A compile message should appear in your terminal, and (depending on your browser) a new tab to the url (http://localhost:3000/) should appear. This is the homepage!
+Do with it what you will, but please be kind as this is a work in progress. 
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## In Action!
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Navigating to a chosen character:
 
-### Code Splitting
+![MaesterToCharacter](https://user-images.githubusercontent.com/57731927/89245260-add65580-d5c5-11ea-9ddc-30a4b87f6fea.gif)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+## Technologies Used
 
-### Analyzing the Bundle Size
+React
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+React Router
 
-### Making a Progressive Web App
+React Testing Library & Jest
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
 
-### Advanced Configuration
+Git and GitHub
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+Fetch API
 
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+This project was bootstrapped with Create React App.
