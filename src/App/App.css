@@ -11,15 +11,31 @@
 }
 
 .selection-main {
-  border: 4px solid teal;
+  border: 4px solid #5f0101;
   border-radius: 4px;
   background-color: white;
-  color: teal;
+  color: black;
   width: 400px;
   margin: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+button {
+  background: #5f0101;
+  border: #ffffff;
+  border-radius: 5px;
+  box-shadow: 4px 7px 13px 0px #000000c2;
+  color: #fdfcfce7;
+  cursor: pointer;
+  font-size: 24px;
+  /* height: 40px;
+  width: 20em; */
+  margin-top: 4%;
+  outline: none;
+  height: 100%;
+  width: 100%;
 }
 

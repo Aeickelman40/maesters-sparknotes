@@ -1,9 +1,10 @@
 .selection-main {
-    border: 4px solid teal;
+    border: 4px solid #5f0101;
     border-radius: 4px;
     background-color: white;
-    color: teal;
+    color: black;
     width: 400px;
+    height: 400px;
     margin: 10px;
     display: flex;
     flex-direction: column;
