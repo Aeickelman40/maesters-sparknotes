@@ -76,7 +76,6 @@ class App extends Component {
           exact path = "/CharacterSelection/:id"
           render={( {match} ) => {
             const { id } = match.params;
-            console.log(id)
             const characterToRender = this.state.characters.find(character => character.characterId === parseInt(id));            
             return <CharacterExpandedPage
                 characterId = {id} 

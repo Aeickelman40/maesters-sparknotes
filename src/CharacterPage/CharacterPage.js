@@ -7,7 +7,6 @@ const CharacterPage = ({ characters }) => {
     // console.log(characters)
     const charMap = characters.map((character) => {
         let characterId = character.url.split('').pop();
-        console.log(characterId)
         return (
             <NavLink to = {`/CharacterSelection/${characterId}`}
                     id = {characterId}> 
