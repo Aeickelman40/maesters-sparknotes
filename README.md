@@ -60,3 +60,12 @@ Git and GitHub
 Fetch API
 
 This project was bootstrapped with Create React App.
+
+
+## Stretch Goals
+
+Post user comments
+
+Expand testing library
+
+Deploy page so user does not have to compile
